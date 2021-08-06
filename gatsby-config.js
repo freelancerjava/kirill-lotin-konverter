@@ -1,6 +1,11 @@
 const config = require('./config');
 
 module.exports = {
+  pathPrefix: "/kirill-lotin-konverter",
+}
+
+
+module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,

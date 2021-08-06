@@ -14,10 +14,10 @@ import pic8 from '../assets/images/pic08.jpg';
 import Scroll from '../components/Scroll';
 
 const sections = [
-  { id: 'top', name: 'Intro', icon: 'fa-home' },
+  { id: 'top', name: 'Kirill-Lotin', icon: 'fa-exchange' },
   { id: 'portfolio', name: 'Portfolio', icon: 'fa-th' },
-  { id: 'about', name: 'About Me', icon: 'fa-user' },
-  { id: 'contact', name: 'Contact', icon: 'fa-envelope' },
+  { id: 'about', name: 'Kompaniya haqida', icon: 'fa-globe' },
+  { id: 'contact', name: "Bog'lanish", icon: 'fa-envelope' },
 ];
 
 var a = {
@@ -57,7 +57,7 @@ var a = {
 
 function transliterate(word) {
   return word.split('').map(function (char, key) {
-    if(char==='е' && (key == 0 || word[key-1]===' ')) return 'ye'
+    if (char === 'е' && (key == 0 || word[key - 1] === ' ')) return 'ye'
     return a[char] || char;
   }).join("");
 }
@@ -94,6 +94,7 @@ function transliterate(word) {
 const IndexPage = () => {
 
   const [data, setdata] = useState({ text: "", result: "" });
+  const [currenttab, setcurrenttab] = useState(0);
 
   const handleChangeText = (val) => {
     setdata({
@@ -111,14 +112,27 @@ const IndexPage = () => {
           <div className="container">
             <header>
               <h2 className="alt">
-                Hi! I'm <strong>Anubhav</strong>
+                Assalomu Alaykum <strong>Qadrdonim</strong>
                 <br />
-              Web developer
+              Yangi Platformamizga hush kelibsiz
             </h2>
-              <p>I have made few things check it out.</p>
+              <p>Ushbu platforma vaqtingizni foydali ishlarga sarflashingizga ko'maklashadi degan umiddamiz</p>
             </header>
 
-            <form method="post" action="#">
+            <div className="tabs">
+              <div 
+              onClick={()=>{
+                setcurrenttab(0)
+              }}
+              className={`tab ${currenttab == 0 ? "active" : ""}`}>Matnni konvertatsiya qilish</div>
+              <div 
+              onClick={()=>{
+                setcurrenttab(1)
+              }}
+              className={`tab ${currenttab == 1 ? "active" : ""}`}>MS Word faylni konvertatsiya qilish</div>
+            </div>
+
+            {currenttab == 0 ? <form method="post" action="#">
               <div className="row">
                 <div className="col-6 col-12-mobile">
                   <textarea
@@ -139,6 +153,9 @@ const IndexPage = () => {
                 </div>
               </div>
             </form>
+              :
+              <></>
+            }
 
             <footer>
               {/* <Scroll type="id" element={'portfolio'}>
@@ -225,7 +242,7 @@ const IndexPage = () => {
         <section id="about" className="three">
           <div className="container">
             <header>
-              <h2>About Me</h2>
+              <h2>Kompaniya haqida</h2>
             </header>
 
             <a href="/#" className="image featured">
@@ -233,44 +250,38 @@ const IndexPage = () => {
             </a>
 
             <p>
-              Developers football competition in diameter big price to layer the
-              pot. Chavez ultricies care who wants to CNN. Lobortis elementum
-              aliquet eget a den of which they do not hold it in hatred developers
-              nor the mountains of the deposit slip. The element of time, sem ante
-              ullamcorper dolor nulla quam placerat viverra environment is not
-              with our customers. Free makeup and skirt until the mouse or
-              partners or to decorate each targeted.
-          </p>
+              IT-soha - bu - fan yoki amaliy faoliyat nima? Ikkalasi ham shunday fikrda. Bu, masalan, yirik xalqaro tashkilotlarning obro'si bo'lishi mumkin. Xususan, YuNESKOning mohiyati bor. Birinchidan, axborot texnologiyalariga ko'ra, ishlov berish va ma'lumotlarni saqlashni amalga oshiruvchi odamlarni tashkil etish usullarini o'rganadigan fanlarning umumiyligi (texnologik, ilmiy yoki muhandislik tadqiqotlarining xususiyatini olib boradigan) hisoblanadi. YuNESKO ekspertlari tomonidan berilgan ikkinchi ta'rif, shunga o'xshash ovozlar. Bu, shuningdek, uning odamlar va sanoat uskunalari bilan o'zaro munosabati uchun usullar, u ilova dasturlariUning faoliyati bilan bog'liq bo'lgan odamlarning ijtimoiy-iqtisodiy va madaniy rivojlanishining aspektlari.
+            </p>
           </div>
         </section>
 
         <section id="contact" className="four">
           <div className="container">
             <header>
-              <h2>Contact</h2>
+              <h2>Biz bilan bog'lanish</h2>
             </header>
 
             <p>
-              The element of time, sem ante ullamcorper dolor nulla quam placerat
-              viverra environment is not with our customers. Free makeup and skirt
-              until the mouse. Japan this innovative and ultricies carton salad
-              clinical ridiculous now passes from enhanced. Mauris pot innovative
-              care for my pain.
-          </p>
+              Loyihani rivojlantirish, investorlik qilish yoki qo'llab quvvatlash masalalari,
+              har qanday savol va takliflar bo'yicha telegramdagi <a href="https://t.me/reactxdeveloper">@ReactXDeveloper</a> manzil
+              yoki uzmagistr@gmail.com elektron manzil, shuningdek quyidagi forma orqali murojaat qilishingiz mumkin.
+
+            </p>
 
             <form method="post" action="#">
               <div className="row">
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="name" placeholder="Name" />
-              </div>
-              <div className="col-6 col-12-mobile">
-                <input type="text" name="email" placeholder="Email" />
-              </div>
-                <div className="col-12">
-                  <textarea name="message" placeholder="Message" />
+                <div className="col-6 col-12-mobile">
+                  <input type="text" name="name" placeholder="Ismingiz" />
+                </div>
+                <div className="col-6 col-12-mobile">
+                  <input type="text" name="email" placeholder="Email, Telegram, ..." />
                 </div>
                 <div className="col-12">
-                  <input type="submit" value="Send Message" />
+                  <textarea name="message" placeholder="Loyihani rivojlantirish, investorlik qilish yoki qo'llab quvvatlash masalalari..."
+                    value="Loyihani rivojlantirish boyicha quyidagi taklifim bor..." />
+                </div>
+                <div className="col-12">
+                  <input type="submit" value="Yuborish" />
                 </div>
               </div>
             </form>
