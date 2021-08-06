@@ -7,7 +7,7 @@ module.exports = {
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-prologue/`, // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: `/kirill-lotin-konverter/`, // This path is subpath of your hosting https://domain/portfolio
   authorName: 'IT LLC',
   heading: 'Web Developer Company',
   // social
