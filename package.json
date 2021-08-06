@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-starter-prologue",
+  "name": "gatsby-starter-konverter",
   "version": "0.0.1",
-  "description": "Gatsby.js V2 starter template based on Prologue by HTML5 UP",
+  "description": "Kirill-Lotin konverter",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-prologue.git"
+    "url": "git+https://github.com/freelancerjava/kirill-lotin-konverter.git"
   },
   "author": {
-    "name": "Anubhav Srivastava",
-    "email": "anubhav.srivastava00@gmail.com"
+    "name": "Azamat Botir",
+    "email": "uzmagistr@gmail.com"
   },
   "dependencies": {
     "gatsby": "^2.20.2",
@@ -44,7 +44,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/anubhavsrivastava/gatsby-starter-prologue/issues"
+    "url": "https://github.com/freelancerjava/kirill-lotin-konverter.git"
   },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-prologue#readme"
+  "homepage": "https://response.uz"
 }
