@@ -11,6 +11,7 @@
     "email": "uzmagistr@gmail.com"
   },
   "dependencies": {
+    "antd": "^4.16.10",
     "gatsby": "^2.20.2",
     "gatsby-plugin-manifest": "^2.3.1",
     "gatsby-plugin-offline": "^3.1.0",
@@ -24,7 +25,7 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "gatsby develop --host 0.0.0.0 --port 8013",
     "build": "npm run clean && gatsby build",
     "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public",
     "serve": "gatsby serve",

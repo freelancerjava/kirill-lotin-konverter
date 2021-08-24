@@ -12,6 +12,12 @@ import pic6 from '../assets/images/pic06.jpg';
 import pic7 from '../assets/images/pic07.jpg';
 import pic8 from '../assets/images/pic08.jpg';
 import Scroll from '../components/Scroll';
+import Uploader from '../components/Uploader';
+
+
+import { Tabs } from 'antd';
+
+const { TabPane } = Tabs;
 
 const sections = [
   { id: 'top', name: 'Kirill-Lotin', icon: 'fa-exchange' },
@@ -119,43 +125,47 @@ const IndexPage = () => {
               <p>Ushbu platforma vaqtingizni foydali ishlarga sarflashingizga ko'maklashadi degan umiddamiz</p>
             </header>
 
-            <div className="tabs">
-              <div 
-              onClick={()=>{
-                setcurrenttab(0)
-              }}
-              className={`tab ${currenttab == 0 ? "active" : ""}`}>Matnni konvertatsiya qilish</div>
-              <div 
-              onClick={()=>{
-                setcurrenttab(1)
-              }}
-              className={`tab ${currenttab == 1 ? "active" : ""}`}>MS Word faylni konvertatsiya qilish</div>
-            </div>
+            {/* <div className="tabs">
+              <div
+                onClick={() => {
+                  setcurrenttab(0)
+                }}
+                className={`tab ${currenttab == 0 ? "active" : ""}`}>Matnni konvertatsiya qilish</div>
+              <div
+                onClick={() => {
+                  setcurrenttab(1)
+                }}
+                className={`tab ${currenttab == 1 ? "active" : ""}`}>MS Word faylni konvertatsiya qilish</div>
+            </div> */}
 
-            {currenttab == 0 ? <form method="post" action="#">
-              <div className="row">
-                <div className="col-6 col-12-mobile">
-                  <textarea
-                    name="cyrillic"
-                    placeholder="Kiril alifbosidagi matn uchun joy"
-                    onChange={(e) => {
-                      handleChangeText(e.target.value)
-                    }}
-                    value={data.text}
-                  />
+            <Tabs defaultActiveKey="1" centered>
+              <TabPane tab={<span>Matnni konvertatsiya qilish</span>} key="1">
+                <form method="post" action="#">
+                  <div className="row">
+                    <div className="col-6 col-12-mobile">
+                      <textarea
+                        name="cyrillic"
+                        placeholder="Kiril alifbosidagi matn uchun joy"
+                        onChange={(e) => {
+                          handleChangeText(e.target.value)
+                        }}
+                        value={data.text}
+                      />
 
-                </div>
-                <div className="col-6 col-12-mobile">
-                  <textarea
-                    name="latin"
-                    placeholder="Lotin alifbosidagi chiquvchi matn uchun joy"
-                    value={data.result} />
-                </div>
-              </div>
-            </form>
-              :
-              <></>
-            }
+                    </div>
+                    <div className="col-6 col-12-mobile">
+                      <textarea
+                        name="latin"
+                        placeholder="Lotin alifbosidagi chiquvchi matn uchun joy"
+                        value={data.result} />
+                    </div>
+                  </div>
+                </form>
+              </TabPane>
+              <TabPane tab={<span>MS Word faylni konvertatsiya qilish</span>} key="2">
+                <Uploader />                
+              </TabPane>
+            </Tabs>
 
             <footer>
               {/* <Scroll type="id" element={'portfolio'}>
