@@ -10,7 +10,7 @@
 import React from 'react'
 import { oneLine } from 'common-tags'
 
-exports.onRenderBody = ({ setHeadComponents }) => {
+exports.onRenderBody = function ({ setHeadComponents }) {
   const GST_ID = 'G-DY64YBCP1E'
   if (process.env.NODE_ENV === `production`) {
     setHeadComponents([
