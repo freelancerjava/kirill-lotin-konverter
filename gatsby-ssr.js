@@ -23,10 +23,11 @@ exports.onRenderBody = ({ setHeadComponents }) => {
                 key="google-gst-init"
                 dangerouslySetInnerHTML={{
                     __html: oneLine`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GST_ID}');`,
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${GST_ID}');
+                    `,
                 }}
             />,
         ])
