@@ -28,6 +28,13 @@ class Layout extends Component {
   render() {
     const { children } = this.props;
     const { isPreloaded } = this.state;
+
+    if(typeof window !== "undefined" ) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments)}
+      gtag('js', new Date());
+      gtag('config', 'G-DY64YBCP1E');
+    }
     return (
       <StaticQuery
         query={graphql`
@@ -50,13 +57,6 @@ class Layout extends Component {
             >
               <html lang="en" />
               <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY64YBCP1E"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){window.dataLayer.push(arguments)}
-                gtag('js', new Date());
-
-                gtag('config', 'G-DY64YBCP1E');
-              </script>
             </Helmet>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1605687623825790"
               crossorigin="anonymous"></script>
