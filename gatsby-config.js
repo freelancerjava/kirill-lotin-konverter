@@ -51,5 +51,11 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-adsense`,
+      options: {
+        publisherId: `ca-pub-1605687623825790`
+      },
+    },
   ],
 };
