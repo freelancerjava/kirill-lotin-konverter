@@ -67,12 +67,12 @@ const Uploader = () => {
             onOk={handleOk} onCancel={handleCancel}
             footer={[
                 <Button key="back" onClick={handleCancel}>
-                  Yopish
+                    Yopish
                 </Button>,
                 <Button key="submit" type="primary" href={file.url}>
-                  Yuklab olish
+                    Yuklab olish
                 </Button>
-              ]}
+            ]}
         >
             <Result
                 status="success"
@@ -82,7 +82,7 @@ const Uploader = () => {
                     <Button type="primary" key="console">Premium kliyentga aylanish</Button>,
                     <Button key="buy" href={"https://google.com"} target="_blank">Reklamani ko'rish</Button>,
                 ]}
-                
+
             />
         </Modal>
     </>
@@ -171,6 +171,14 @@ const FilesUploader = ({ value, onChange, setfiles }) => {
         },
         onDrop(e) {
             // console.log('Dropped files', e.dataTransfer.files);
+        },
+        beforeUpload: file => {
+            console.log(file.type);
+            
+            if (file.type !== 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                message.error(`${file.name} - docx file emas`);
+            }
+            return file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ? true : Upload.LIST_IGNORE;
         },
     };
 
