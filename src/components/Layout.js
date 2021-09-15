@@ -29,12 +29,12 @@ class Layout extends Component {
     const { children } = this.props;
     const { isPreloaded } = this.state;
 
-    if(typeof window !== "undefined" ) {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){window.dataLayer.push(arguments)}
-      gtag('js', new Date());
-      gtag('config', 'G-DY64YBCP1E');
-    }
+    // if(typeof window !== "undefined" ) {
+    //   window.dataLayer = window.dataLayer || [];
+    //   function gtag(){window.dataLayer.push(arguments)}
+    //   gtag('js', new Date());
+    //   gtag('config', 'G-DY64YBCP1E');
+    // }
     return (
       <StaticQuery
         query={graphql`
