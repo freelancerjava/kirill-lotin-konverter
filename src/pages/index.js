@@ -16,6 +16,7 @@ import Uploader from '../components/Uploader';
 
 
 import { Tabs } from 'antd';
+import MyLeaderBoardAd from '../components/MyLeaderBoardAd';
 
 const { TabPane } = Tabs;
 
@@ -163,7 +164,7 @@ const IndexPage = () => {
                 </form>
               </TabPane>
               <TabPane tab={<span>MS Word faylni konvertatsiya qilish</span>} key="2">
-                <Uploader />                
+                <Uploader />
               </TabPane>
             </Tabs>
 
@@ -176,6 +177,8 @@ const IndexPage = () => {
             </footer>
           </div>
         </section>
+
+        <MyLeaderBoardAd />
 
         <section id="portfolio" className="two">
           <div className="container">
@@ -249,6 +252,8 @@ const IndexPage = () => {
           </div>
         </section>
 
+        <MyLeaderBoardAd />
+
         <section id="about" className="three">
           <div className="container">
             <header>
@@ -264,6 +269,8 @@ const IndexPage = () => {
             </p>
           </div>
         </section>
+
+        <MyLeaderBoardAd />
 
         <section id="contact" className="four">
           <div className="container">
@@ -297,6 +304,8 @@ const IndexPage = () => {
             </form>
           </div>
         </section>
+        <MyLeaderBoardAd />
+
       </div>
 
       <PageFooter />
