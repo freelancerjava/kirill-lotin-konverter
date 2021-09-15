@@ -188,7 +188,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* <MyLeaderBoardAd /> */}
+        <MyLeaderBoardAd />
 
         <section id="portfolio" className="two">
           <div className="container">
@@ -262,7 +262,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* <MyLeaderBoardAd /> */}
+        <MyLeaderBoardAd />
 
         <section id="about" className="three">
           <div className="container">
@@ -280,7 +280,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        {/* <MyLeaderBoardAd /> */}
+        <MyLeaderBoardAd />
 
         <section id="contact" className="four">
           <div className="container">
@@ -314,7 +314,7 @@ const IndexPage = () => {
             </form>
           </div>
         </section>
-        {/* <MyLeaderBoardAd /> */}
+        <MyLeaderBoardAd />
 
       </div>
 
