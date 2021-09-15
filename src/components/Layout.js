@@ -66,6 +66,8 @@ class Layout extends Component {
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>
+
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           </>
         )}
       />
