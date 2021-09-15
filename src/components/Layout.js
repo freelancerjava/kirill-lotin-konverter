@@ -58,16 +58,16 @@ class Layout extends Component {
               <html lang="en" />
               {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-DY64YBCP1E"></script> */}
             </Helmet>
-            {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1605687623825790"
-              crossorigin="anonymous"></script>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-            </script> */}
+            
+            {/* <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
 
             <div className={isPreloaded ? 'main-body is-preload' : 'main-body'}>
               {children}
             </div>
 
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            {/* <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> */}
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1605687623825790" crossorigin="anonymous"></script>
           </>
         )}
       />
