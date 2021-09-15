@@ -128,8 +128,8 @@ const IndexPage = () => {
             </header>
 
             <AdSense.Google
-              client='ca-pub-7292810486004926'
-              slot='7806394673'
+              client='ca-pub-1605687623825790'
+              slot='9272316480'
               style={{ display: 'block' }}
               format='auto'
               responsive='true'
