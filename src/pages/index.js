@@ -127,14 +127,14 @@ const IndexPage = () => {
               <p>Ushbu platforma vaqtingizni foydali ishlarga sarflashingizga ko'maklashadi degan umiddamiz</p>
             </header>
 
-            <AdSense.Google
+            {/* <AdSense.Google
               client='ca-pub-1605687623825790'
               slot='9272316480'
               style={{ display: 'block' }}
               format='auto'
               responsive='true'
               layoutKey='-gw-1+2a-9x+5c'
-            />
+            /> */}
 
             {/* <div className="tabs">
               <div
@@ -188,7 +188,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <MyLeaderBoardAd />
+        {/* <MyLeaderBoardAd /> */}
 
         <section id="portfolio" className="two">
           <div className="container">
@@ -262,7 +262,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <MyLeaderBoardAd />
+        {/* <MyLeaderBoardAd /> */}
 
         <section id="about" className="three">
           <div className="container">
@@ -280,7 +280,7 @@ const IndexPage = () => {
           </div>
         </section>
 
-        <MyLeaderBoardAd />
+        {/* <MyLeaderBoardAd /> */}
 
         <section id="contact" className="four">
           <div className="container">
@@ -314,7 +314,7 @@ const IndexPage = () => {
             </form>
           </div>
         </section>
-        <MyLeaderBoardAd />
+        {/* <MyLeaderBoardAd /> */}
 
       </div>
 

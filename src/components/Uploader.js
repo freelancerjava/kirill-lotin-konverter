@@ -94,7 +94,7 @@ const FilesUploader = ({ value, onChange, setfiles }) => {
     const props = {
         name: 'files',
         multiple: true,
-        action: 'https://kirill-lotin.response.uz:8443/upload',
+        action: 'http://response.uz:2337/upload',
         customRequest: (option) => {
 
             function getError(option, xhr) {
