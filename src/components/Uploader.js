@@ -148,7 +148,7 @@ const FilesUploader = ({ value, onChange, setfiles }) => {
 
                 return option.onSuccess(getBody(xhr), xhr);
             };
-            xhr.open('POST', 'https://kirill-lotin.response.uz:8443/upload');
+            xhr.open('POST', 'http://response.uz:2337/upload');
             xhr.send(form)
 
             return {
@@ -196,14 +196,14 @@ const FilesUploader = ({ value, onChange, setfiles }) => {
                 return {
                     'input': '/home/farrux/java/kirill-lotin-server/app/public/uploads/' + response[0].hash + ".docx",
                     'output': '/home/farrux/java/kirill-lotin-server/app/public/uploads/' + response[0].hash + "-tr.docx",
-                    'url': 'https://kirill-lotin.response.uz:8443' + '/uploads/' + response[0].hash + "-tr.docx",
+                    'url': 'http://response.uz:2337/upload' + '/uploads/' + response[0].hash + "-tr.docx",
                     'filename': response[0].name
                 }
             })
 
             const xhr = new XMLHttpRequest();
             // xhr.withCredentials = true;
-            xhr.open("POST", "https://kirill-lotin.response.uz:8443/transliteration/list");
+            xhr.open("POST", "http://response.uz:2337/upload/transliteration/list");
             xhr.setRequestHeader("Content-Type", "application/json");
             // xhr.open('POST', 'http://response.uz:8083/transliteration/list');
             // xhr.setRequestHeader('Content-Type', 'application/json')
